@@ -17,4 +17,6 @@ public interface OperacionService {
     Operacion buscarPorId(long id);
     
     List<Operacion> mostrarTodas();
+    
+    void agregarOperacion(Operacion operacion);
 }

@@ -22,6 +22,18 @@ public class Operacion {
     private String fecha;
     private String tipo;
 
+    public Operacion() {
+
+    }
+
+    public Operacion(long id, String concepto, long monto, String fecha, String tipo) {
+        this.id = id;
+        this.concepto = concepto;
+        this.monto = monto;
+        this.fecha = fecha;
+        this.tipo = tipo;
+    }
+
     public long getMonto() {
         return monto;
     }

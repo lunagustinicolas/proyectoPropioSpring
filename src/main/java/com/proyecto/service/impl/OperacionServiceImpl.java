@@ -37,4 +37,9 @@ public class OperacionServiceImpl implements OperacionService {
                 .findAll();
     }
 
+    @Override
+    public void agregarOperacion(Operacion operacion) {
+        operacionRepository.save(operacion);
+    }
+
 }

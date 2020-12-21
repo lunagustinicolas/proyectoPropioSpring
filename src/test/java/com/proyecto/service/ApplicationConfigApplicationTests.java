@@ -25,10 +25,20 @@ class ApplicationConfigApplicationTests {
         });
         assertEquals(5, listaDeOperaciones.size());
     }
-
+    
+    @Test
     void buscarPorId_ingresoIdExistente_retornaOperacion() {
         Operacion operacionBuscada = operacionService.buscarPorId(5);
         assertEquals("Concepto raro", operacionBuscada.getConcepto());
+    }
+    
+    @Test
+    void agregarOperacion_agregoOperacion_laListaEsMasLarga(){
+        Operacion operacionAgregada = new Operacion(20,"concepto insertado", 3094,"2020-12-23","E");
+        operacionService.agregarOperacion(operacionAgregada);
+        List<Operacion> listaDeOperaciones = operacionService.mostrarTodas();
+        
+        assertEquals(6, listaDeOperaciones.size());
     }
 
 }
